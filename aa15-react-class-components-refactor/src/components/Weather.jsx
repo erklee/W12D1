@@ -17,7 +17,7 @@ import { toQueryString } from '../utils';
 //       );
 //     }
 
-//     pollWeather = async (location) => {
+//     pollWeather = async (location) => {  
 //       let url = 'http://api.openweathermap.org/data/2.5/weather?';
 
 //       /* Remember that it's unsafe to expose your API key. (Note that pushing
