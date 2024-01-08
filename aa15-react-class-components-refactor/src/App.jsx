@@ -30,38 +30,35 @@ const folders = [
 //     };
 //   }
 
-  const App = () => {
-    const [showClock, setShowClock] = useState(true);
-  
-    const toggleClock = () => setShowClock(!showClock);
-  
-    return (
-      <div className="widgets">
-        <Folder folders={folders} />
-        <Weather />
-        <ClockToggle toggleClock={toggleClock} />
-        {showClock && <Clock />}
-        <Autocomplete names={names} />
-      </div>
-    );
-  };
+// toggleClock = () => this.setState({ showClock: !this.state.showClock });
 
+// render () {
+//   return (
+//     <div className="widgets">
+//         <Folder folders={folders} />
+//         <Weather />
+//         <ClockToggle toggleClock={this.toggleClock} />
+//         {this.state.showClock && <Clock />}
+//         <Autocomplete names={names} />
+//       </div>
+//     );
+//   }
+// }
 
-  
-  toggleClock = () => this.setState({ showClock: !this.state.showClock });
-  
-  render () {
-    return (
-      <div className="widgets">
-        <Folder folders={folders} />
-        <Weather />
-        <ClockToggle toggleClock={this.toggleClock} />
-        {this.state.showClock && <Clock />}
-        <Autocomplete names={names} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  const [showClock, setShowClock] = useState(true);
 
+  const toggleClock = () => setShowClock(!showClock);
+
+  return (
+    <div className="widgets">
+      <Folder folders={folders} />
+      <Weather />
+      <ClockToggle toggleClock={toggleClock} />
+      {showClock && <Clock />}
+      <Autocomplete names={names} />
+    </div>
+  );
+};
 export default App;
 
